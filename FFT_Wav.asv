@@ -23,10 +23,9 @@ function FFT_Wav()
     %{
     Splitting the clips to try get dominant freqs
     from the parts of the sound where the doppler freq
-    can be measured more acurately and not be overwhelm by
-    the loudness of the vehicle when it has reached the observer
+    can be measured more acurately 
     %}
-    data = data(1:(4/15)*L);
+    %data = data(1:(4/15)*L);
     %data = data((9/15*L):L);
 
     L = length(data);
@@ -48,8 +47,6 @@ function FFT_Wav()
     %Using the graph plug in the values
     %Dominant frequencies are the doppler values for moving towards
     %(fs_max) and away (fs_min)
-    %Taken dom frequencies for moving towards and away from observer, from
-    %Fig1 and Fig2 respectively.
     vs_km = dopCalc(294.2, 371.5);
     fprintf('Speed of Object is: %fkm/h\n', vs_km);
 
